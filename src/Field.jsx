@@ -1,6 +1,5 @@
 import { useGame } from "./GameContext";
 
-/** A Field is a collection of Holes */
 export default function Field() {
   const { field } = useGame();
   return (
@@ -12,7 +11,6 @@ export default function Field() {
   );
 }
 
-/** A Hole is either empty or contains a mole */
 function Hole({ hasMole }) {
   const { whack } = useGame();
   if (hasMole) return <li onClick={whack} className="hole mole"></li>;
